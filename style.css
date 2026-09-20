@@ -1,0 +1,637 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fc;
+    color: #111;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    width: 100%;
+    height: 65px;
+
+    background-color: #073b73;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    color: white;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 25px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: #c9e0ff;
+}
+
+
+/* =====================================
+   HEADER BUTTON
+===================================== */
+
+.nav-btn {
+    border: none;
+
+    background-color: white;
+    color: #073b73;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    padding: 11px 17px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #e8f1fa;
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+.main-content {
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =====================================
+   TITLE
+===================================== */
+
+.main-content h2 {
+    width: 520px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+}
+
+
+/* =====================================
+   REGISTRATION CARD
+===================================== */
+
+.registration-box {
+    width: 520px;
+    min-height: 450px;
+
+    background-color: white;
+
+    border: 1.5px solid #174d85;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.registration-box form {
+    width: 100%;
+    max-width: 390px;
+}
+
+
+/* =====================================
+   FORM ROW
+===================================== */
+
+.form-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+
+
+/* =====================================
+   LABEL
+===================================== */
+
+.form-row label {
+    width: 110px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #222;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================
+   INPUT
+===================================== */
+
+.form-row input {
+    flex: 1;
+
+    width: 100%;
+    height: 35px;
+
+    border: 1px solid #9ba8b5;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    padding: 6px 10px;
+
+    font-size: 13px;
+
+    background-color: #fff;
+
+    transition: 0.2s;
+}
+
+
+/* INPUT FOCUS */
+
+.form-row input:focus {
+    border-color: #073b73;
+
+    box-shadow:
+        0 0 0 2px rgba(7, 59, 115, 0.12);
+}
+
+
+/* =====================================
+   PASSWORD
+===================================== */
+
+.password-container {
+    position: relative;
+
+    flex: 1;
+
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+
+    padding-right: 50px;
+}
+
+
+/* =====================================
+   SHOW PASSWORD
+===================================== */
+
+.toggle-password {
+    display: none;
+
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #073b73;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #021f3d;
+}
+
+
+/* =====================================
+   REGISTER BUTTON
+===================================== */
+
+.register-btn {
+    display: block;
+
+    width: 180px;
+    height: 40px;
+
+    margin: 25px auto 0;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #073b73;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.register-btn:hover {
+    background-color: #052d59;
+
+    box-shadow:
+        0 3px 8px rgba(7, 59, 115, 0.3);
+}
+
+.register-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+#message {
+    min-height: 18px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+/* SUCCESS */
+
+#message.success {
+    color: #16803c;
+}
+
+
+/* ERROR */
+
+#message.error {
+    color: #d62828;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    width: 100%;
+    min-height: 65px;
+
+    background-color: #073b73;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+    padding: 10px 30px;
+}
+
+
+/* =====================================
+   FOOTER LOGO
+===================================== */
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+}
+
+.footer-icon {
+    font-size: 16px;
+}
+
+
+/* =====================================
+   FOOTER DESCRIPTION
+===================================== */
+
+.footer-description {
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 9px;
+
+    line-height: 12px;
+}
+
+
+/* =====================================
+   SOCIAL
+===================================== */
+
+.social {
+    text-align: center;
+
+    font-size: 9px;
+}
+
+.connect-text {
+    display: block;
+
+    margin-bottom: 3px;
+}
+
+.social-icons {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================
+   FOOTER BUTTON
+===================================== */
+
+.footer-btn {
+    border: none;
+
+    background-color: white;
+
+    color: #073b73;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.footer-btn:hover {
+    background-color: #e8f1fa;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .header {
+        height: auto;
+
+        min-height: 65px;
+
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+
+    /* MAIN */
+
+    .main-content {
+        padding: 40px 15px;
+    }
+
+    .main-content h2 {
+        width: 100%;
+        max-width: 520px;
+
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* CARD */
+
+    .registration-box {
+        width: 100%;
+        max-width: 520px;
+
+        padding: 30px 20px;
+    }
+
+
+    /* FORM */
+
+    .registration-box form {
+        max-width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        padding: 15px;
+    }
+
+    .footer-description {
+        display: none;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 450px) {
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        font-size: 20px;
+    }
+
+    .nav-btn {
+        font-size: 9px;
+
+        padding: 9px 11px;
+    }
+
+
+    .main-content h2 {
+        font-size: 22px;
+    }
+
+
+    .registration-box {
+        min-height: 430px;
+
+        padding: 25px 20px;
+    }
+
+
+    .form-row {
+        display: block;
+
+        margin-bottom: 15px;
+    }
+
+
+    .form-row label {
+        display: block;
+
+        width: 100%;
+
+        margin-bottom: 6px;
+
+        font-size: 13px;
+    }
+
+
+    .form-row input {
+        width: 100%;
+
+        height: 38px;
+    }
+
+
+    .password-container {
+        width: 100%;
+    }
+
+
+    .register-btn {
+        width: 100%;
+
+        height: 42px;
+    }
+
+
+    .footer-logo {
+        display: none;
+    }
+}
