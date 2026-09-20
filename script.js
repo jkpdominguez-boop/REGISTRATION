@@ -1,36 +1,11 @@
-/* =====================================
-   GET ELEMENTS
-===================================== */
-
-const form = document.getElementById("registrationForm");
-
-const message = document.getElementById("message");
+// =========================
+// SHOW / HIDE PASSWORD
+// =========================
 
 const password = document.getElementById("password");
 
-const togglePassword = document.getElementById("togglePassword");
-
-
-/* =====================================
-   SHOW / HIDE PASSWORD
-===================================== */
-
-password.addEventListener("input", function () {
-
-    if (password.value.length > 0) {
-
-        togglePassword.style.display = "block";
-
-    } else {
-
-        togglePassword.style.display = "none";
-
-        password.type = "password";
-
-        togglePassword.textContent = "Show";
-    }
-
-});
+const togglePassword =
+    document.getElementById("togglePassword");
 
 
 togglePassword.addEventListener("click", function () {
@@ -39,32 +14,34 @@ togglePassword.addEventListener("click", function () {
 
         password.type = "text";
 
-        togglePassword.textContent = "Hide";
+        togglePassword.textContent = "🙈";
 
     } else {
 
         password.type = "password";
 
-        togglePassword.textContent = "Show";
+        togglePassword.textContent = "👁";
 
     }
 
 });
 
 
-/* =====================================
-   FORM SUBMISSION
-===================================== */
+// =========================
+// REGISTRATION FORM
+// =========================
 
-form.addEventListener("submit", function (event) {
+const registrationForm =
+    document.getElementById("registrationForm");
 
-    // Prevent page refresh
+const message =
+    document.getElementById("message");
+
+
+registrationForm.addEventListener("submit", function (event) {
+
     event.preventDefault();
 
-
-    /* =================================
-       GET VALUES
-    ================================= */
 
     const studentId =
         document.getElementById("studentId").value.trim();
@@ -82,12 +59,10 @@ form.addEventListener("submit", function (event) {
         document.getElementById("username").value.trim();
 
     const passwordValue =
-        document.getElementById("password").value;
+        password.value.trim();
 
 
-    /* =================================
-       CHECK EMPTY FIELDS
-    ================================= */
+    // CHECK EMPTY FIELDS
 
     if (
         studentId === "" ||
@@ -98,142 +73,42 @@ form.addEventListener("submit", function (event) {
         passwordValue === ""
     ) {
 
-        showMessage(
-            "Please complete all fields.",
-            "error"
-        );
+        message.textContent =
+            "Please fill in all fields.";
+
+        message.style.color = "red";
 
         return;
     }
 
 
-    /* =================================
-       CHECK STUDENT ID
-    ================================= */
-
-    if (studentId.length < 3) {
-
-        showMessage(
-            "Please enter a valid Student ID.",
-            "error"
-        );
-
-        return;
-    }
-
-
-    /* =================================
-       CHECK FULL NAME
-    ================================= */
-
-    if (fullName.length < 3) {
-
-        showMessage(
-            "Please enter your full name.",
-            "error"
-        );
-
-        return;
-    }
-
-
-    /* =================================
-       CHECK EMAIL
-    ================================= */
-
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-    if (!emailPattern.test(email)) {
-
-        showMessage(
-            "Please enter a valid email address.",
-            "error"
-        );
-
-        return;
-    }
-
-
-    /* =================================
-       CHECK USERNAME
-    ================================= */
-
-    if (username.length < 4) {
-
-        showMessage(
-            "Username must be at least 4 characters.",
-            "error"
-        );
-
-        return;
-    }
-
-
-    /* =================================
-       CHECK PASSWORD
-    ================================= */
+    // CHECK PASSWORD
 
     if (passwordValue.length < 6) {
 
-        showMessage(
-            "Password must be at least 6 characters.",
-            "error"
-        );
+        message.textContent =
+            "Password must be at least 6 characters.";
+
+        message.style.color = "red";
 
         return;
     }
 
 
-    /* =================================
-       SUCCESS
-    ================================= */
+    // SUCCESS
 
-    showMessage(
-        "Registration successful!",
-        "success"
-    );
+    message.textContent =
+        "Registration successful!";
+
+    message.style.color = "green";
 
 
-    /* =================================
-       RESET FORM
-    ================================= */
+    // CLEAR FORM
 
-    form.reset();
+    registrationForm.reset();
 
-
-    // Reset password controls
     password.type = "password";
 
-    togglePassword.style.display = "none";
-
-    togglePassword.textContent = "Show";
-
-
-    /* =================================
-       REMOVE MESSAGE AFTER 3 SECONDS
-    ================================= */
-
-    setTimeout(function () {
-
-        message.textContent = "";
-
-        message.className = "";
-
-    }, 3000);
+    togglePassword.textContent = "👁";
 
 });
-
-
-/* =====================================
-   MESSAGE FUNCTION
-===================================== */
-
-function showMessage(text, type) {
-
-    message.textContent = text;
-
-    message.className = type;
-
-}

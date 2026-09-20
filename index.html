@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FixTrack - Registration</title>
 
@@ -10,15 +12,12 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-
+    <!-- HEADER -->
     <header class="header">
 
         <div class="logo">
-            <span class="logo-icon">🔧</span>
-            <span class="logo-text">FIXTRACK</span>
+            <img src="logo.png" alt="FixTrack Logo">
+            <span>FIXTRACK</span>
         </div>
 
         <nav class="navbar">
@@ -26,7 +25,7 @@
             <a href="#">REPORT STATUS</a>
             <a href="#">ACCOUNT</a>
 
-            <button class="nav-btn" type="button">
+            <button class="nav-btn">
                 REPORT AN ISSUE
             </button>
         </nav>
@@ -34,13 +33,10 @@
     </header>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
-
+    <!-- MAIN -->
     <main class="main-content">
 
-        <h2>Registration</h2>
+        <h1>Registration</h1>
 
         <div class="registration-box">
 
@@ -48,77 +44,82 @@
 
                 <!-- Student ID -->
                 <div class="form-row">
+                    <label for="studentId">Student Id</label>
 
-                    <label for="studentId">
-                        Student Id
-                    </label>
-
-                    <input type="text" id="studentId" name="studentId" autocomplete="off">
-
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="Enter your student ID"
+                    >
                 </div>
 
 
                 <!-- Full Name -->
                 <div class="form-row">
+                    <label for="fullName">Full Name</label>
 
-                    <label for="fullName">
-                        Full Name
-                    </label>
-
-                    <input type="text" id="fullName" name="fullName" autocomplete="name">
-
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                    >
                 </div>
 
 
                 <!-- Email -->
                 <div class="form-row">
+                    <label for="email">Email</label>
 
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input type="email" id="email" name="email" autocomplete="email">
-
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email address"
+                    >
                 </div>
 
 
                 <!-- Address -->
                 <div class="form-row">
+                    <label for="address">Address</label>
 
-                    <label for="address">
-                        Address
-                    </label>
-
-                    <input type="text" id="address" name="address" autocomplete="street-address">
-
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Enter your address"
+                    >
                 </div>
 
 
                 <!-- Username -->
                 <div class="form-row">
+                    <label for="username">User Name</label>
 
-                    <label for="username">
-                        User Name
-                    </label>
-
-                    <input type="text" id="username" name="username" autocomplete="username">
-
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                    >
                 </div>
 
 
                 <!-- Password -->
-                <div class="form-row password-row">
+                <div class="form-row">
 
-                    <label for="password">
-                        Password
-                    </label>
+                    <label for="password">Password</label>
 
                     <div class="password-container">
 
-                        <input type="password" id="password" name="password" autocomplete="new-password">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                        >
 
-                        <button type="button" id="togglePassword" class="toggle-password">
-                            Show
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            👁
                         </button>
 
                     </div>
@@ -126,13 +127,15 @@
                 </div>
 
 
-                <!-- Register Button -->
-                <button type="submit" class="register-btn">
+                <!-- Register -->
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
                     Register
                 </button>
 
 
-                <!-- Message -->
                 <p id="message"></p>
 
             </form>
@@ -142,40 +145,32 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer class="footer">
 
         <div class="footer-logo">
-            <span class="footer-icon">🔧</span>
+
+            <img src="logo.png" alt="FixTrack Logo">
+
             <strong>FIXTRACK</strong>
+
         </div>
 
 
         <div class="footer-description">
 
-            <span>
-                Campus Maintenance Request and
-            </span>
+            <span>Campus Maintenance Request and</span>
 
-            <span>
-                Management System for
-            </span>
+            <span>Management System for</span>
 
-            <span>
-                Philippine Christian University-Dasmariñas
-            </span>
+            <span>Philippine Christian University-Dasmariñas</span>
 
         </div>
 
 
         <div class="social">
 
-            <span class="connect-text">
-                CONNECT WITH US!
-            </span>
+            <span>CONNECT WITH US!</span>
 
             <div class="social-icons">
                 <span>●</span>
@@ -186,14 +181,13 @@
         </div>
 
 
-        <button class="footer-btn" type="button">
+        <button class="footer-btn">
             REPORT AN ISSUE
         </button>
 
     </footer>
 
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>

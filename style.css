@@ -1,6 +1,6 @@
-/* =====================================
+/* =========================
    RESET
-===================================== */
+========================= */
 
 * {
     margin: 0;
@@ -9,629 +9,553 @@
 }
 
 
-/* =====================================
-   BODY
-===================================== */
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f9fc;
+    font-family: Arial, sans-serif;
+    background: white;
     color: #111;
-
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
 }
 
 
-/* =====================================
+/* =========================
    HEADER
-===================================== */
+========================= */
 
 .header {
-    width: 100%;
-    height: 65px;
+    height: 85px;
 
-    background-color: #073b73;
+    background: #063b70;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 45px;
-
-    color: white;
+    padding: 0 40px;
 }
 
 
-/* =====================================
-   LOGO
-===================================== */
+/* LOGO */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
-.logo-icon {
-    font-size: 25px;
+.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
 }
 
-.logo-text {
-    font-size: 22px;
+.logo span {
+    color: white;
+
+    font-size: 32px;
     font-weight: bold;
-    letter-spacing: 1.5px;
 }
 
 
-/* =====================================
-   NAVIGATION
-===================================== */
+/* NAVBAR */
 
 .navbar {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 }
 
 .navbar a {
     color: white;
+
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
-
-    transition: 0.2s;
 }
 
 .navbar a:hover {
-    color: #c9e0ff;
+    text-decoration: underline;
 }
 
 
-/* =====================================
-   HEADER BUTTON
-===================================== */
+/* NAV BUTTON */
 
 .nav-btn {
     border: none;
 
-    background-color: white;
-    color: #073b73;
+    background: white;
+    color: #063b70;
 
-    font-size: 11px;
+    padding: 14px 24px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
     font-weight: bold;
 
-    padding: 11px 17px;
-
-    border-radius: 5px;
-
     cursor: pointer;
-
-    transition: 0.2s;
 }
 
 .nav-btn:hover {
-    background-color: #e8f1fa;
+    background: #eeeeee;
 }
 
 
-/* =====================================
+/* =========================
    MAIN
-===================================== */
+========================= */
 
 .main-content {
-    flex: 1;
+    min-height: 805px;
 
-    width: 100%;
+    padding-top: 55px;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
-    justify-content: center;
-
-    padding: 50px 20px;
 }
 
 
-/* =====================================
-   TITLE
-===================================== */
+/* REGISTRATION TITLE */
 
-.main-content h2 {
-    width: 520px;
+.main-content h1 {
+    width: 100%;
 
-    font-size: 28px;
-    font-weight: 600;
-
-    color: #111;
+    padding-left: 60px;
 
     margin-bottom: 25px;
 
-    text-align: left;
+    color: #06427c;
+
+    font-size: 42px;
+
+    font-weight: bold;
 }
 
 
-/* =====================================
-   REGISTRATION CARD
-===================================== */
+/* =========================
+   REGISTRATION BOX
+========================= */
 
 .registration-box {
-    width: 520px;
-    min-height: 450px;
 
-    background-color: white;
+    width: 820px;
 
-    border: 1.5px solid #174d85;
+    min-height: 630px;
 
-    border-radius: 12px;
+    border: 3px solid #1257a6;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 15px;
 
-    padding: 45px;
+    background: white;
 
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.12);
-}
-
-
-/* =====================================
-   FORM
-===================================== */
-
-.registration-box form {
-    width: 100%;
-    max-width: 390px;
-}
-
-
-/* =====================================
-   FORM ROW
-===================================== */
-
-.form-row {
-    width: 100%;
+        0 8px 20px rgba(0, 0, 0, 0.12);
 
     display: flex;
+
     align-items: center;
 
-    margin-bottom: 17px;
+    justify-content: center;
 }
 
 
-/* =====================================
-   LABEL
-===================================== */
+/* =========================
+   FORM
+========================= */
+
+#registrationForm {
+    width: 650px;
+}
+
+
+/* FORM ROW */
+
+.form-row {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* LABEL */
 
 .form-row label {
-    width: 110px;
 
-    font-size: 14px;
-    font-weight: 500;
+    width: 180px;
 
-    color: #222;
+    font-size: 22px;
 
-    flex-shrink: 0;
+    font-weight: bold;
+
+    color: #101d31;
 }
 
 
-/* =====================================
-   INPUT
-===================================== */
+/* INPUT */
 
 .form-row input {
-    flex: 1;
 
-    width: 100%;
-    height: 35px;
+    width: 520px;
 
-    border: 1px solid #9ba8b5;
+    height: 55px;
 
-    border-radius: 5px;
+    padding: 0 16px;
+
+    border: 2px solid #c4cfdb;
+
+    border-radius: 9px;
 
     outline: none;
 
-    padding: 6px 10px;
+    font-size: 17px;
 
-    font-size: 13px;
-
-    background-color: #fff;
-
-    transition: 0.2s;
+    color: #333;
 }
 
 
-/* INPUT FOCUS */
+.form-row input::placeholder {
+    color: #60738d;
+}
+
 
 .form-row input:focus {
-    border-color: #073b73;
 
-    box-shadow:
-        0 0 0 2px rgba(7, 59, 115, 0.12);
+    border-color: #1257a6;
+
+    box-shadow: 0 0 4px rgba(18, 87, 166, 0.25);
 }
 
 
-/* =====================================
+/* =========================
    PASSWORD
-===================================== */
+========================= */
 
 .password-container {
-    position: relative;
 
-    flex: 1;
+    width: 520px;
 
-    width: 100%;
+    height: 55px;
+
+    display: flex;
 }
+
 
 .password-container input {
+
     width: 100%;
 
-    padding-right: 50px;
+    height: 55px;
+
+    border-radius: 9px 0 0 9px;
 }
 
 
-/* =====================================
-   SHOW PASSWORD
-===================================== */
+.password-container button {
 
-.toggle-password {
-    display: none;
+    width: 60px;
 
-    position: absolute;
+    height: 55px;
 
-    right: 8px;
-    top: 50%;
+    border: 2px solid #c4cfdb;
 
-    transform: translateY(-50%);
+    border-left: none;
 
-    border: none;
+    border-radius: 0 9px 9px 0;
 
-    background: transparent;
-
-    color: #073b73;
-
-    font-size: 11px;
-    font-weight: bold;
+    background: #eef2f6;
 
     cursor: pointer;
+
+    font-size: 20px;
 }
 
-.toggle-password:hover {
-    color: #021f3d;
+
+.password-container button:hover {
+    background: #e0e6ec;
 }
 
 
-/* =====================================
+/* =========================
    REGISTER BUTTON
-===================================== */
+========================= */
 
 .register-btn {
+
     display: block;
 
-    width: 180px;
-    height: 40px;
+    width: 440px;
 
-    margin: 25px auto 0;
+    height: 60px;
+
+    margin: 35px auto 0;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 9px;
 
-    background-color: #073b73;
+    background: #0753a5;
 
     color: white;
 
-    font-size: 14px;
+    font-size: 22px;
 
     font-weight: bold;
 
     cursor: pointer;
-
-    transition: 0.2s;
 }
+
 
 .register-btn:hover {
-    background-color: #052d59;
-
-    box-shadow:
-        0 3px 8px rgba(7, 59, 115, 0.3);
-}
-
-.register-btn:active {
-    transform: scale(0.98);
+    background: #063f7d;
 }
 
 
-/* =====================================
-   MESSAGE
-===================================== */
+/* MESSAGE */
 
 #message {
-    min-height: 18px;
 
     text-align: center;
 
-    font-size: 13px;
+    margin-top: 15px;
+
+    font-size: 15px;
 
     font-weight: bold;
-
-    margin-top: 15px;
 }
 
 
-/* SUCCESS */
-
-#message.success {
-    color: #16803c;
-}
-
-
-/* ERROR */
-
-#message.error {
-    color: #d62828;
-}
-
-
-/* =====================================
+/* =========================
    FOOTER
-===================================== */
+========================= */
 
 .footer {
-    width: 100%;
-    min-height: 65px;
 
-    background-color: #073b73;
+    height: 145px;
+
+    background: #063b70;
 
     color: white;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    gap: 60px;
+    gap: 70px;
 
-    padding: 10px 30px;
+    padding: 20px 50px;
 }
 
 
-/* =====================================
-   FOOTER LOGO
-===================================== */
+/* FOOTER LOGO */
 
 .footer-logo {
+
     display: flex;
 
     align-items: center;
 
-    gap: 6px;
+    gap: 10px;
 
-    font-size: 12px;
-}
-
-.footer-icon {
-    font-size: 16px;
+    font-size: 25px;
 }
 
 
-/* =====================================
-   FOOTER DESCRIPTION
-===================================== */
+.footer-logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+/* DESCRIPTION */
 
 .footer-description {
+
     display: flex;
 
     flex-direction: column;
 
-    font-size: 9px;
+    line-height: 1.5;
 
-    line-height: 12px;
+    font-size: 14px;
 }
 
 
-/* =====================================
-   SOCIAL
-===================================== */
+/* SOCIAL */
 
 .social {
+
     text-align: center;
 
-    font-size: 9px;
+    font-size: 14px;
+
+    font-weight: bold;
 }
 
-.connect-text {
-    display: block;
-
-    margin-bottom: 3px;
-}
 
 .social-icons {
-    font-size: 13px;
 
-    letter-spacing: 3px;
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 10px;
+
+    font-size: 22px;
 }
 
 
-/* =====================================
-   FOOTER BUTTON
-===================================== */
+/* FOOTER BUTTON */
 
 .footer-btn {
+
+    background: white;
+
+    color: #063b70;
+
     border: none;
 
-    background-color: white;
+    border-radius: 8px;
 
-    color: #073b73;
+    padding: 15px 25px;
 
-    font-size: 10px;
+    font-size: 14px;
 
     font-weight: bold;
 
-    padding: 10px 15px;
-
-    border-radius: 5px;
-
     cursor: pointer;
-
-    transition: 0.2s;
 }
+
 
 .footer-btn:hover {
-    background-color: #e8f1fa;
+    background: #eeeeee;
 }
 
 
-/* =====================================
+/* =========================
    RESPONSIVE
-===================================== */
+========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
-    /* HEADER */
+    .header {
+        padding: 0 20px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .registration-box {
+        width: 90%;
+    }
+
+    #registrationForm {
+        width: 80%;
+    }
+
+    .form-row label {
+        width: 140px;
+        font-size: 17px;
+    }
+
+    .form-row input,
+    .password-container {
+        width: 100%;
+    }
+
+    .footer {
+        gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
 
     .header {
         height: auto;
 
-        min-height: 65px;
+        padding: 15px;
 
-        padding: 15px 20px;
+        flex-direction: column;
+
+        gap: 15px;
     }
 
     .navbar {
-        gap: 10px;
-    }
-
-    .navbar a {
-        display: none;
-    }
-
-
-    /* MAIN */
-
-    .main-content {
-        padding: 40px 15px;
-    }
-
-    .main-content h2 {
-        width: 100%;
-        max-width: 520px;
-
-        font-size: 24px;
-
-        margin-bottom: 20px;
-    }
-
-
-    /* CARD */
-
-    .registration-box {
-        width: 100%;
-        max-width: 520px;
-
-        padding: 30px 20px;
-    }
-
-
-    /* FORM */
-
-    .registration-box form {
-        max-width: 100%;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        gap: 20px;
-
         flex-wrap: wrap;
 
-        padding: 15px;
+        justify-content: center;
     }
 
-    .footer-description {
-        display: none;
-    }
-}
-
-
-/* =====================================
-   SMALL MOBILE
-===================================== */
-
-@media (max-width: 450px) {
-
-    .logo-text {
-        font-size: 18px;
+    .main-content {
+        padding-top: 30px;
     }
 
-    .logo-icon {
-        font-size: 20px;
+    .main-content h1 {
+        padding-left: 0;
+
+        text-align: center;
+
+        font-size: 30px;
     }
-
-    .nav-btn {
-        font-size: 9px;
-
-        padding: 9px 11px;
-    }
-
-
-    .main-content h2 {
-        font-size: 22px;
-    }
-
 
     .registration-box {
-        min-height: 430px;
-
-        padding: 25px 20px;
+        min-height: 600px;
     }
-
 
     .form-row {
-        display: block;
+        flex-direction: column;
 
-        margin-bottom: 15px;
+        align-items: stretch;
+
+        gap: 8px;
     }
-
 
     .form-row label {
-        display: block;
-
         width: 100%;
-
-        margin-bottom: 6px;
-
-        font-size: 13px;
     }
-
 
     .form-row input {
         width: 100%;
-
-        height: 38px;
     }
-
 
     .password-container {
         width: 100%;
     }
 
-
     .register-btn {
         width: 100%;
-
-        height: 42px;
     }
 
+    .footer {
+        height: auto;
 
-    .footer-logo {
-        display: none;
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 30px;
     }
+
 }
