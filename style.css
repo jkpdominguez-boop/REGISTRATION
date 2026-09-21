@@ -1,561 +1,610 @@
-/* =========================
-   RESET
-========================= */
+/* =====================================================
+   GENERAL
+===================================================== */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background: white;
-    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 .header {
-    height: 85px;
+    width: 100%;
+    height: 80px;
+    background-color: #003b73;
 
-    background: #063b70;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    padding: 0 45px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 40px;
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    color: white;
+    text-decoration: none;
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
-
+    width: 55px;
+    height: 48px;
     object-fit: contain;
 }
 
 .logo span {
-    color: white;
-
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 
 
-/* NAVBAR */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-.navbar {
+.navigation {
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
-.navbar a {
+.navigation a {
     color: white;
-
     text-decoration: none;
 
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.navigation a:hover {
+    color: #dcecff;
 }
 
 
-/* NAV BUTTON */
+/* =====================================================
+   HEADER REPORT BUTTON
+===================================================== */
 
-.nav-btn {
+.report-button {
+    background-color: white;
+    color: #003b73;
+
     border: none;
+    border-radius: 6px;
 
-    background: white;
-    color: #063b70;
+    padding: 12px 20px;
 
-    padding: 14px 24px;
-
-    border-radius: 7px;
-
-    font-size: 14px;
+    font-size: 11px;
     font-weight: bold;
 
     cursor: pointer;
 }
 
-.nav-btn:hover {
-    background: #eeeeee;
+.report-button:hover {
+    background-color: #e8f1f8;
 }
 
 
-/* =========================
+/* =====================================================
    MAIN
-========================= */
+===================================================== */
 
-.main-content {
-    min-height: 805px;
-
-    padding-top: 55px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* REGISTRATION TITLE */
-
-.main-content h1 {
+.main {
     width: 100%;
 
-    padding-left: 60px;
+    min-height: calc(100vh - 145px);
 
-    margin-bottom: 25px;
+    background-color: #ffffff;
 
-    color: #06427c;
+    position: relative;
 
-    font-size: 42px;
-
-    font-weight: bold;
+    padding-top: 45px;
 }
 
 
-/* =========================
+/* =====================================================
+   REGISTRATION TITLE
+===================================================== */
+
+.registration-title {
+    position: absolute;
+
+    left: 55px;
+    top: 45px;
+
+    margin: 0;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: #111111;
+}
+
+
+/* =====================================================
    REGISTRATION BOX
-========================= */
+===================================================== */
 
 .registration-box {
 
-    width: 820px;
+    /* MAS MALAKING BOX */
+    width: 650px;
+    height: 500px;
 
-    min-height: 630px;
+    /* CENTER */
+    position: absolute;
 
-    border: 3px solid #1257a6;
+    left: 50%;
+    top: 45px;
 
-    border-radius: 15px;
+    transform: translateX(-50%);
 
-    background: white;
+    /* DESIGN */
+    background-color: #ffffff;
+
+    border: 2px solid #003b73;
+
+    border-radius: 10px;
 
     box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.12);
+        0 4px 10px rgba(0, 0, 0, 0.20);
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    /* FORM SPACING */
+    padding: 125px 75px 50px 75px;
 }
 
 
-/* =========================
-   FORM
-========================= */
-
-#registrationForm {
-    width: 650px;
-}
-
-
-/* FORM ROW */
+/* =====================================================
+   FORM ROW
+===================================================== */
 
 .form-row {
-
-    display: flex;
-
-    align-items: center;
-
-    margin-bottom: 25px;
-}
-
-
-/* LABEL */
-
-.form-row label {
-
-    width: 180px;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    color: #101d31;
-}
-
-
-/* INPUT */
-
-.form-row input {
-
-    width: 520px;
-
-    height: 55px;
-
-    padding: 0 16px;
-
-    border: 2px solid #c4cfdb;
-
-    border-radius: 9px;
-
-    outline: none;
-
-    font-size: 17px;
-
-    color: #333;
-}
-
-
-.form-row input::placeholder {
-    color: #60738d;
-}
-
-
-.form-row input:focus {
-
-    border-color: #1257a6;
-
-    box-shadow: 0 0 4px rgba(18, 87, 166, 0.25);
-}
-
-
-/* =========================
-   PASSWORD
-========================= */
-
-.password-container {
-
-    width: 520px;
-
-    height: 55px;
-
-    display: flex;
-}
-
-
-.password-container input {
-
     width: 100%;
 
-    height: 55px;
+    display: flex;
+    align-items: center;
 
-    border-radius: 9px 0 0 9px;
+    margin-bottom: 14px;
 }
 
 
-.password-container button {
+/* =====================================================
+   LABEL
+===================================================== */
 
-    width: 60px;
+.form-row label {
+    width: 145px;
 
-    height: 55px;
+    flex-shrink: 0;
 
-    border: 2px solid #c4cfdb;
+    margin: 0;
 
-    border-left: none;
+    font-size: 14px;
 
-    border-radius: 0 9px 9px 0;
-
-    background: #eef2f6;
-
-    cursor: pointer;
-
-    font-size: 20px;
+    color: #111111;
 }
 
 
-.password-container button:hover {
-    background: #e0e6ec;
+/* =====================================================
+   INPUT
+===================================================== */
+
+.form-row input {
+    width: 100%;
+
+    height: 34px;
+
+    border: 1px solid #777777;
+
+    border-radius: 4px;
+
+    background-color: #ffffff;
+
+    padding: 5px 9px;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+.form-row input:focus {
+    border-color: #003b73;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 59, 115, 0.12);
 }
 
 
-/* =========================
-   REGISTER BUTTON
-========================= */
+/* =====================================================
+   PASSWORD
+===================================================== */
 
-.register-btn {
+.password-wrapper {
+    position: relative;
 
-    display: block;
+    width: 100%;
+}
 
-    width: 440px;
+.password-wrapper input {
+    width: 100%;
 
-    height: 60px;
+    padding-right: 42px;
+}
 
-    margin: 35px auto 0;
+.eye-button {
+    position: absolute;
+
+    right: 4px;
+    top: 3px;
+
+    width: 30px;
+    height: 28px;
+
+    padding: 0;
 
     border: none;
 
-    border-radius: 9px;
+    background: transparent;
 
-    background: #0753a5;
+    color: #555555;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.eye-button:hover {
+    color: #003b73;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.register-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+.register-button {
+    width: 190px;
+    height: 42px;
+
+    background-color: #003b73;
 
     color: white;
 
-    font-size: 22px;
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 13px;
 
     font-weight: bold;
 
     cursor: pointer;
 }
 
-
-.register-btn:hover {
-    background: #063f7d;
+.register-button:hover {
+    background-color: #002d59;
 }
 
 
-/* MESSAGE */
+/* =====================================================
+   MESSAGE
+===================================================== */
 
 #message {
-
     text-align: center;
 
-    margin-top: 15px;
+    font-size: 13px;
 
-    font-size: 15px;
-
-    font-weight: bold;
+    margin-top: 12px;
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer {
+    width: 100%;
 
-    height: 145px;
+    height: 65px;
 
-    background: #063b70;
+    background-color: #003b73;
 
     color: white;
 
     display: flex;
 
     align-items: center;
-
-    justify-content: center;
-
-    gap: 70px;
-
-    padding: 20px 50px;
 }
 
 
-/* FOOTER LOGO */
+/* =====================================================
+   FOOTER CONTENT
+===================================================== */
 
-.footer-logo {
+.footer-content {
+    width: 100%;
+
+    padding-left: 120px;
+    padding-right: 120px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
-
-    font-size: 25px;
+    justify-content: space-between;
 }
 
 
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
 .footer-logo img {
-
-    width: 55px;
-
-    height: 55px;
+    width: 38px;
+    height: 32px;
 
     object-fit: contain;
 }
 
+.footer-logo strong {
+    font-size: 13px;
 
-/* DESCRIPTION */
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   FOOTER DESCRIPTION
+===================================================== */
 
 .footer-description {
-
     display: flex;
 
     flex-direction: column;
 
-    line-height: 1.5;
+    font-size: 9px;
 
-    font-size: 14px;
+    line-height: 12px;
 }
 
 
-/* SOCIAL */
+/* =====================================================
+   SOCIAL
+===================================================== */
 
 .social {
-
     text-align: center;
 
-    font-size: 14px;
-
-    font-weight: bold;
+    font-size: 9px;
 }
-
 
 .social-icons {
-
     display: flex;
 
+    align-items: center;
     justify-content: center;
 
-    gap: 15px;
+    gap: 10px;
 
-    margin-top: 10px;
+    margin-top: 4px;
+}
 
-    font-size: 22px;
+.social-icons i {
+    font-size: 15px;
 }
 
 
-/* FOOTER BUTTON */
+/* =====================================================
+   FOOTER BUTTON
+===================================================== */
 
-.footer-btn {
+.footer-button {
+    background-color: white;
 
-    background: white;
-
-    color: #063b70;
+    color: #003b73;
 
     border: none;
 
-    border-radius: 8px;
+    border-radius: 5px;
 
-    padding: 15px 25px;
+    padding: 10px 17px;
 
-    font-size: 14px;
+    font-size: 10px;
 
     font-weight: bold;
 
     cursor: pointer;
 }
 
+.footer-button:hover {
+    background-color: #e8f1f8;
 
-.footer-btn:hover {
-    background: #eeeeee;
+    color: #003b73;
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media (max-width: 900px) {
 
-    .header {
-        padding: 0 20px;
+    .header-content {
+        padding: 0 25px;
     }
 
-    .logo span {
-        font-size: 24px;
-    }
-
-    .navbar {
+    .navigation {
         gap: 15px;
     }
 
-    .navbar a {
-        font-size: 11px;
+    .navigation a {
+        font-size: 10px;
     }
 
     .registration-box {
-        width: 90%;
+        width: 600px;
     }
 
-    #registrationForm {
-        width: 80%;
+    .footer-content {
+        padding-left: 40px;
+        padding-right: 40px;
     }
-
-    .form-row label {
-        width: 140px;
-        font-size: 17px;
-    }
-
-    .form-row input,
-    .password-container {
-        width: 100%;
-    }
-
-    .footer {
-        gap: 25px;
-    }
-
 }
 
 
-@media (max-width: 600px) {
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
 
     .header {
         height: auto;
 
-        padding: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
+    .header-content {
         flex-direction: column;
 
         gap: 15px;
+
+        padding: 0 20px;
     }
 
-    .navbar {
+    .navigation {
         flex-wrap: wrap;
 
         justify-content: center;
+
+        gap: 12px;
     }
 
-    .main-content {
-        padding-top: 30px;
+    .navigation a {
+        font-size: 9px;
     }
 
-    .main-content h1 {
-        padding-left: 0;
 
-        text-align: center;
+    .main {
+        min-height: auto;
 
-        font-size: 30px;
+        padding: 35px 0 50px;
     }
+
+
+    .registration-title {
+        position: static;
+
+        margin-left: 30px;
+
+        margin-bottom: 20px;
+
+        font-size: 21px;
+    }
+
 
     .registration-box {
-        min-height: 600px;
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 90%;
+
+        height: auto;
+
+        min-height: 450px;
+
+        margin: 0 auto;
+
+        padding: 80px 35px 50px;
     }
 
-    .form-row {
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 8px;
-    }
 
     .form-row label {
-        width: 100%;
+        width: 110px;
+
+        font-size: 11px;
     }
+
 
     .form-row input {
-        width: 100%;
+        height: 32px;
     }
 
-    .password-container {
-        width: 100%;
-    }
-
-    .register-btn {
-        width: 100%;
-    }
 
     .footer {
         height: auto;
 
+        padding: 20px 0;
+    }
+
+
+    .footer-content {
         flex-direction: column;
 
-        gap: 20px;
+        gap: 15px;
 
-        padding: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }

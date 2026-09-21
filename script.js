@@ -1,11 +1,12 @@
-// =========================
-// SHOW / HIDE PASSWORD
-// =========================
-
-const password = document.getElementById("password");
+// =====================================================
+// PASSWORD SHOW / HIDE
+// =====================================================
 
 const togglePassword =
     document.getElementById("togglePassword");
+
+const password =
+    document.getElementById("password");
 
 
 togglePassword.addEventListener("click", function () {
@@ -14,22 +15,24 @@ togglePassword.addEventListener("click", function () {
 
         password.type = "text";
 
-        togglePassword.textContent = "🙈";
+        this.innerHTML =
+            '<i class="bi bi-eye-slash"></i>';
 
     } else {
 
         password.type = "password";
 
-        togglePassword.textContent = "👁";
+        this.innerHTML =
+            '<i class="bi bi-eye"></i>';
 
     }
 
 });
 
 
-// =========================
+// =====================================================
 // REGISTRATION FORM
-// =========================
+// =====================================================
 
 const registrationForm =
     document.getElementById("registrationForm");
@@ -42,6 +45,8 @@ registrationForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
+
+    // Get values
 
     const studentId =
         document.getElementById("studentId").value.trim();
@@ -59,10 +64,10 @@ registrationForm.addEventListener("submit", function (event) {
         document.getElementById("username").value.trim();
 
     const passwordValue =
-        password.value.trim();
+        document.getElementById("password").value.trim();
 
 
-    // CHECK EMPTY FIELDS
+    // Check empty fields
 
     if (
         studentId === "" ||
@@ -74,7 +79,7 @@ registrationForm.addEventListener("submit", function (event) {
     ) {
 
         message.textContent =
-            "Please fill in all fields.";
+            "Please complete all fields.";
 
         message.style.color = "red";
 
@@ -82,20 +87,7 @@ registrationForm.addEventListener("submit", function (event) {
     }
 
 
-    // CHECK PASSWORD
-
-    if (passwordValue.length < 6) {
-
-        message.textContent =
-            "Password must be at least 6 characters.";
-
-        message.style.color = "red";
-
-        return;
-    }
-
-
-    // SUCCESS
+    // Success
 
     message.textContent =
         "Registration successful!";
@@ -103,12 +95,14 @@ registrationForm.addEventListener("submit", function (event) {
     message.style.color = "green";
 
 
-    // CLEAR FORM
+    // Clear form
 
     registrationForm.reset();
 
-    password.type = "password";
 
-    togglePassword.textContent = "👁";
+    // Reset eye icon
+
+    togglePassword.innerHTML =
+        '<i class="bi bi-eye"></i>';
 
 });
